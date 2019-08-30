@@ -1,10 +1,10 @@
 {
-  "name": "nodejs-package",
-  "version": "0.0.1",
-  "description": "",
+  "name": "mc-address-converter",
+  "version": "0.0.2",
+  "description": "Address converter",
   "main": "dist/index.js",
   "bin": {
-    "hexlet": "dist/bin/converter.js"
+    "converter": "dist/bin/converter.js"
   },
   "engines": {
     "node": ">=8"
@@ -27,11 +27,18 @@
     "url": "https://github.com/Snokke/Converter/issues"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "<rootDir>/.compiled/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/.history/",
+      "<rootDir>/dist/"
+    ]
   },
   "homepage": "https://github.com/Snokke/Converter#readme",
   "dependencies": {
     "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
+    "commander": "^3.0.1",
     "gulp": "^4.0.2",
     "source-map-support": "^0.5.13"
   },

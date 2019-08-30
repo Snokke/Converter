@@ -1,7 +1,7 @@
 install: install-deps
 
 run:
-	npx babel-node 'src/bin/hexlet.js' 10
+	npx babel-node 'src/bin/converter.js' test.txt
 
 install-deps:
 	npm install

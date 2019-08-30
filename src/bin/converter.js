@@ -1,5 +1,12 @@
 #!/usr/bin/env node
 
-import half from '..';
+import program from 'commander';
+import { version, description } from '../../package.json';
+import converter from '..';
 
-console.log(half(Number(process.argv[process.argv.length - 1])));
+program
+  .version(version)
+  .description(description)
+  .arguments('<firstConfig>')
+  .action(firstConf => console.log(converter(firstConf)))
+  .parse(process.argv);
